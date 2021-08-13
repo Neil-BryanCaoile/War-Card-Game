@@ -1,7 +1,5 @@
 package com.caoile;
 
-import jdk.swing.interop.SwingInterOpUtils;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -48,7 +46,7 @@ public class War extends Game {
 
 
         //Player name
-        String player1Name ="";
+        String player1Name;
         String player2Name ="Computer";
 
         //Get player 1 name
@@ -67,7 +65,7 @@ public class War extends Game {
         player1 = new WarPlayer(player1Name);
         player2 = new WarPlayer(player2Name);
 
-        ArrayList <StandardCard> cardsCurrentlyDrawn = new ArrayList<StandardCard>();
+        ArrayList <StandardCard> cardsCurrentlyDrawn = new ArrayList<>();
         int round = 1;
         while (playingDeck.getCards().size() != 0){
 
@@ -215,7 +213,7 @@ public class War extends Game {
                 "____________¶¶¶____________¶¶¶ \n" +
                 "____________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶ \n");
         if(p1.getCardsWon().size() > p2.getCardsWon().size()){
-            System.out.println("            " + p1.getName() + " won!");
+            System.out.println("            Congratulations " + p1.getName() + " won!");
         }else if(p1.getCardsWon().size() < p2.getCardsWon().size()){
             System.out.println(p2.getName() + " won!");
         }else{
